@@ -1,5 +1,7 @@
 package com.aaa.mvvm_db_tutorial.db
 
+import android.media.Image
+import android.widget.ImageView
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -11,6 +13,7 @@ data class UserEntity (
     @ColumnInfo(name = "name") val name: String,
     @ColumnInfo(name = "email") val email: String,
     @ColumnInfo(name = "phone") val phone: String
+//    @ColumnInfo(name = "image") val image: ImageView
 )
 
 

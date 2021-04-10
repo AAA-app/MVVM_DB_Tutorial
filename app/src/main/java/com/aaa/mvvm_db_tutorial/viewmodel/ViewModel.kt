@@ -8,17 +8,13 @@ import com.aaa.mvvm_db_tutorial.db.UserEntity
 
 class ViewModel(app: Application) : AndroidViewModel(app) {
 
-    lateinit var allUsers: MutableLiveData<List<UserEntity>>
-
-    init {
-        allUsers = MutableLiveData()
-    }
+    var allUsers: MutableLiveData<List<UserEntity>> = MutableLiveData()
 
     fun getAllUserObservers(): MutableLiveData<List<UserEntity>> {
         return allUsers
     }
 
-    fun getAllUsers() {
+    private fun getAllUsers() {
         val userDao = RoomAppDb.getAppDatabase((getApplication()))?.userDao()
         val list = userDao?.getAllUserInfo()
         allUsers.postValue(list)
