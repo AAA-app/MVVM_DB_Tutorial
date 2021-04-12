@@ -8,7 +8,7 @@ import com.aaa.mvvm_db_tutorial.db.UserEntity
 
 class ViewModel(app: Application) : AndroidViewModel(app) {
 
-    var allUsers: MutableLiveData<List<UserEntity>> = MutableLiveData()
+    private var allUsers: MutableLiveData<List<UserEntity>> = MutableLiveData()
 
     fun getAllUserObservers(): MutableLiveData<List<UserEntity>> {
         return allUsers

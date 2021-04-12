@@ -22,12 +22,9 @@
             android:id="@+id/imageInput"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             android:src="@mipmap/ic_add_image"
             tools:ignore="ContentDescription"
             android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="10dp"/>
     </androidx.cardview.widget.CardView>
 
@@ -37,37 +34,40 @@
         android:id="@+id/nameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your name"
+        android:hint="@string/enter_your_name"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardView"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/emailInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="enter your email"
+        android:hint="@string/enter_your_email"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameInput"
-        android:layout_margin ="10dp"/>
+        android:layout_margin ="10dp"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/phoneInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="enter your phone"
+        android:hint="@string/enter_your_phone"
         android:inputType="phone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailInput"
-        android:layout_margin ="10dp"/>
+        android:layout_margin ="10dp"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="@string/save"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/phoneInput"
         android:layout_margin="10dp"/>
